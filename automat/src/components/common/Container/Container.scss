@@ -1,0 +1,9 @@
+.Container {
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+.Container__Inner {
+    max-width: 1000px;
+}

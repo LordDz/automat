@@ -1,0 +1,35 @@
+.TopMenu {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    margin-top: 1em;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 0;
+    }
+
+    li {
+        list-style-type: none;
+        margin-left: 1em;
+
+        a {
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+            padding-right: 0.1em;
+        }
+
+        a:hover{
+            transition: box-shadow 0.3s, font-weight 0.3s;
+            box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+            font-weight: bold;
+            padding-right: 0;
+        }
+    }
+}

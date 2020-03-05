@@ -1,0 +1,14 @@
+.RowBox {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.RowBox > * {
+    border: 1px solid black;
+    transition: border 0.3s;
+}
+
+.RowBox > *:hover {
+    border: 1px solid lightblue;
+}
