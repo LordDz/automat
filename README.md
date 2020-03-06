@@ -1,1 +1,1 @@
-Rough design of a portfolio website, requires a lot more fine tuning so except it to be.. rough.
+Rough design of a portfolio website, requires a lot more fine tuning so expect it to be.. rough.

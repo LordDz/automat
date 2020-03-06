@@ -1,0 +1,17 @@
+.ColorButton {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 1fr;
+    grid-gap: 10px;
+    border: none;
+    padding: 2em;
+
+    button {
+        transition: color 0.3s;
+        border-radius: 8px;
+    }
+    
+    button:hover {
+        color: lightblue;
+    }
+}

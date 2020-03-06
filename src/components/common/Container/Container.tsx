@@ -16,7 +16,7 @@ const Container: React.FC<IContainerProps> = (props) => {
 
   const Wrapper = props.bgImg !== undefined && props.bgImg !== null ?
   styled.section`
-  background-image: url(${'/img/bg/' + props.bgImg});
+  background-image: url(${'/img/bg' + props.bgImg});
   background-repeat: no-repeat;
   background-size: cover;
   ` :
