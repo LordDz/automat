@@ -1,9 +1,12 @@
 .Container {
-    min-height: 500px;
+    // min-height: 500px;
     display: flex;
     justify-content: center;
 }
 
 .Container__Inner {
+    display: flex;
+    flex-direction: column;
     max-width: 1000px;
+    width: 100%;
 }

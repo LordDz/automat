@@ -4,6 +4,7 @@ import './TopMenu.scss';
 import { ILink } from '../../../models/Link';
 
 interface ITopMenu {
+  nameId: string;
   links: ILink[];
 }
 
@@ -13,15 +14,16 @@ const TopMenu: React.FC<ITopMenu> = (props) => {
 
   const Label = styled.span`
   display: flex;
-  align-items: center;
-  line-height: 1.2;
-  &::before {
-    content: '◀';
-    margin: 0 10px;
+  margin-left: 1em;
+  transition: color 0.3s;
+  color: gray;
+  &::after {
+    content: '⯈';
+    margin: 0 5px;
   }
 `;
 
-function getLinks(){
+function getLinks() {
   const links = [];
   for (let i = 0; i < props.links.length; i++) {
     links.push(<li key={i}><a href={'#' + props.links[i].name}>{props.links[i].title}</a></li>);
@@ -31,8 +33,8 @@ function getLinks(){
 
   return (
     <div className='TopMenu'>
-      <Label>Hey yoooou!</Label>
       <ul>
+        <li><a href={'#' + props.nameId}><Label>David</Label></a></li>
         {links}
       </ul>
     </div>

@@ -1,14 +1,20 @@
 .RowBox {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 1fr;
     grid-gap: 10px;
-}
+    height: fit-content;
+    margin-left: 1em;
 
-.RowBox > * {
-    border: 1px solid black;
-    transition: border 0.3s;
-}
-
-.RowBox > *:hover {
-    border: 1px solid lightblue;
+    button {
+        border: none;
+        color: white;
+        transition: color 0.3s;
+        background-color: #796d6d2e;
+        border-radius: 8px;
+    }
+    
+    button:hover {
+        color: lightblue;
+    }
 }

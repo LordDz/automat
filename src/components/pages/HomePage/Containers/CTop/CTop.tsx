@@ -9,8 +9,12 @@ interface ICTopProps {
 const CTop: React.FC<ICTopProps> = (props) => {
 
   return (
-    <Container nameId={props.nameId} className='CTop' bgColor='#001D38' bgImg='dz_head.jpg'>
+    <Container nameId={props.nameId} className='CTop' bgColor='#cdcdcd' bgImg='ctop.jpg'>
+      <div className='CTop__Center'>
+        <h1>David Zetterdahl</h1>
+        <h2>Frontend & UX & Level Designer & Game Hobbyist & ..</h2>
 
+      </div>
 
 
     </Container>

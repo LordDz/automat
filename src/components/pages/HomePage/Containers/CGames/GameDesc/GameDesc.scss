@@ -1,0 +1,17 @@
+.GameDesc {
+    min-height: 520px;
+    width: 560px;
+    padding: 1em;
+    border: 1px solid black;
+    border-radius: 2px;
+    background-color: #000000bf;
+    color: white;
+
+    h1 {
+        max-width: 600px;
+    }
+
+    p {
+        margin-bottom: 1em;
+    }
+}

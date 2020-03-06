@@ -21,7 +21,7 @@ const Container: React.FC<IContainerProps> = (props) => {
   background-size: cover;
   ` :
   styled.section`
-  background-color: blue;
+  background-color: ${props.bgColor};
   `;
 
   return (
