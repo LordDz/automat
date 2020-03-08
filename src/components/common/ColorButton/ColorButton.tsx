@@ -1,23 +1,33 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import './ColorButton.scss';
 import styled from 'styled-components';
 
-interface IColorButtonProps {
+export interface IColorButtonProps {
   idNr: number;
   text: string;
   bgColorActive: string;
   onClick: (idNr: number) => void;
 }
 
+interface IButton {
+  bgColor: string;
+}
+
+interface ILabel {
+  color: string;
+}
+
+const Button = styled.button<IButton> `background-color: ${props => props.bgColor};`
+const Label = styled.label<ILabel> `
+color: ${props => props.color};
+font-size: 16px;
+font-weight: bold;`;
+
 const ColorButton: React.FC<IColorButtonProps> = (props) => {
 
   const [isActive, setIsActive] = useState(false);
-
-  const Button = isActive ?
-  styled.button `background-color: ${props.bgColorActive};` :
-  styled.button `background-color: gray`;
-
-  const Label = styled.label `color: ${props.bgColorActive}`;
+  const bgColor = isActive ? props.bgColorActive : 'gray';
+  const textColor = isActive ? 'white' : props.bgColorActive;
 
   function handleClick() {
     activate(true);
@@ -29,7 +39,7 @@ const ColorButton: React.FC<IColorButtonProps> = (props) => {
   }
   
   return (
-  <Button className='ColorButton' onClick={handleClick}><Label>{props.text}</Label>
+  <Button bgColor={bgColor} className='ColorButton' onClick={handleClick}><Label color={textColor}>{props.text}</Label>
   </Button>);
 };
 

@@ -8,11 +8,7 @@ interface ITopMenu {
   links: ILink[];
 }
 
-const TopMenu: React.FC<ITopMenu> = (props) => {
-
-  const links = getLinks();
-
-  const Label = styled.span`
+const Label = styled.span`
   display: flex;
   margin-left: 1em;
   transition: color 0.3s;
@@ -22,6 +18,12 @@ const TopMenu: React.FC<ITopMenu> = (props) => {
     margin: 0 5px;
   }
 `;
+
+const TopMenu: React.FC<ITopMenu> = (props) => {
+
+  const links = getLinks();
+
+  
 
 function getLinks() {
   const links = [];

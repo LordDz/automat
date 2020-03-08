@@ -27,7 +27,7 @@ const CGames: React.FC<ICGamesProps> = (props) => {
         const videoUrl = str.videoUrl ? str.videoUrl : '';
         setBgSrc('/games/' + str.bg);
         setGameTitle(str.title);
-        // setGameText('This is a fancy mod');
+        setGameText('Todo insert text here some time in the future.');
         setGameVideoUrl(videoUrl);
         setBgSrc('/games/' + str.bg);
         return true;
