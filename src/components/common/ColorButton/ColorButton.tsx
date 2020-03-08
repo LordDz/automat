@@ -18,7 +18,9 @@ interface ILabel {
   color: string;
 }
 
-const Button = styled.button<IButton> `background-color: ${props => props.bgColor};`
+const Button = styled.button<IButton> `background-color: ${props => props.bgColor};
+border-radius: 2px;`
+
 const Label = styled.label<ILabel> `
 color: ${props => props.color};
 font-size: 16px;

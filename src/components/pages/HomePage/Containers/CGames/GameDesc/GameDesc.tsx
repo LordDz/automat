@@ -23,8 +23,6 @@ const GameDesc: React.FC<IGameDescProps> = (props) => {
       <h2>{props.title}</h2>
       <p>{props.text}</p>
       {videoContent}
-      {/* <iframe title='hey' width="560" height="315" src={props.videoUrl}
-       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe> */}
     </div>
   );
 }
