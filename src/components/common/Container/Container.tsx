@@ -16,7 +16,7 @@ interface IWrapper{
 }
 
 const Wrapper = styled.section<IWrapper> `
-  background-image: ${props => props.bgImage ? 'url(/img/bg/' + props.bgImage + ')' : ''};
+  background-image: ${props => props.bgImage ? 'url(' + props.bgImage + ')' : ''};
   background-color: ${props => props.bgColor};
   background-repeat: no-repeat;
   background-size: cover;

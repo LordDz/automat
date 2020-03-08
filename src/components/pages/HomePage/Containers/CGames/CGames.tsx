@@ -14,22 +14,20 @@ interface ICGamesProps {
 
 const CGames: React.FC<ICGamesProps> = (props) => {
 
-  const [bgSrc, setBgSrc] = useState('/games/' + props.initialBg);
+  const [bgSrc, setBgSrc] = useState(props.initialBg);
   const [gameTitle, setGameTitle] = useState(props.title);
   const [gameText, setGameText] = useState('Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ');
   const [gameVideoUrl, setGameVideoUrl] = useState('');
-
 
   function changeGame(name: string) {
     props.games.find(function(str) {
       if (str.name === name)
       {
         const videoUrl = str.videoUrl ? str.videoUrl : '';
-        setBgSrc('/games/' + str.bg);
         setGameTitle(str.title);
         setGameText('Todo insert text here some time in the future.');
         setGameVideoUrl(videoUrl);
-        setBgSrc('/games/' + str.bg);
+        setBgSrc(str.bg);
         return true;
       }
       return false;

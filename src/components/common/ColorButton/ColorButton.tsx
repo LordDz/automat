@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React from 'react';
 import './ColorButton.scss';
 import styled from 'styled-components';
 
@@ -6,6 +6,7 @@ export interface IColorButtonProps {
   idNr: number;
   text: string;
   bgColorActive: string;
+  enabled: boolean;
   onClick: (idNr: number) => void;
 }
 
@@ -21,21 +22,16 @@ const Button = styled.button<IButton> `background-color: ${props => props.bgColo
 const Label = styled.label<ILabel> `
 color: ${props => props.color};
 font-size: 16px;
-font-weight: bold;`;
+font-weight: bold;
+text-shadow: 1px 1px black;`;
 
 const ColorButton: React.FC<IColorButtonProps> = (props) => {
 
-  const [isActive, setIsActive] = useState(false);
-  const bgColor = isActive ? props.bgColorActive : 'gray';
-  const textColor = isActive ? 'white' : props.bgColorActive;
+  const bgColor = props.enabled ? props.bgColorActive : 'gray';
+  const textColor = props.enabled ? 'white' : props.bgColorActive;
 
   function handleClick() {
-    activate(true);
     props.onClick(props.idNr);
-  }
-
-  function activate(val: boolean) {
-    setIsActive(val);
   }
   
   return (
