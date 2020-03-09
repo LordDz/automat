@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/automat/static/css/main.6d9ae8f6.chunk.css",
+    "main.js": "/automat/static/js/main.da6e568d.chunk.js",
+    "main.js.map": "/automat/static/js/main.da6e568d.chunk.js.map",
+    "runtime-main.js": "/automat/static/js/runtime-main.ef900d92.js",
+    "runtime-main.js.map": "/automat/static/js/runtime-main.ef900d92.js.map",
+    "static/js/2.48a08194.chunk.js": "/automat/static/js/2.48a08194.chunk.js",
+    "static/js/2.48a08194.chunk.js.map": "/automat/static/js/2.48a08194.chunk.js.map",
+    "index.html": "/automat/index.html",
+    "precache-manifest.8a1c2510990c7563aa57bab441dd3f01.js": "/automat/precache-manifest.8a1c2510990c7563aa57bab441dd3f01.js",
+    "service-worker.js": "/automat/service-worker.js",
+    "static/css/main.6d9ae8f6.chunk.css.map": "/automat/static/css/main.6d9ae8f6.chunk.css.map",
+    "static/js/2.48a08194.chunk.js.LICENSE.txt": "/automat/static/js/2.48a08194.chunk.js.LICENSE.txt",
+    "static/media/aoe2.jpg": "/automat/static/media/aoe2.15c74cfb.jpg",
+    "static/media/bms.jpg": "/automat/static/media/bms.95335645.jpg",
+    "static/media/ctop.jpg": "/automat/static/media/ctop.ae1d04a1.jpg",
+    "static/media/hl2.jpg": "/automat/static/media/hl2.6b780ab5.jpg",
+    "static/media/menofwar.jpg": "/automat/static/media/menofwar.23181d39.jpg",
+    "static/media/sc2.jpg": "/automat/static/media/sc2.4ee657cb.jpg",
+    "static/media/sc2a.jpg": "/automat/static/media/sc2a.a209d0fc.jpg",
+    "static/media/steve.jpg": "/automat/static/media/steve.0db3df4c.jpg",
+    "static/media/tortoiseisland.jpg": "/automat/static/media/tortoiseisland.a3c26647.jpg",
+    "static/media/wunderling.jpg": "/automat/static/media/wunderling.16e8c66f.jpg",
+    "static/media/wunderling_a.jpg": "/automat/static/media/wunderling_a.aa535743.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ef900d92.js",
+    "static/js/2.48a08194.chunk.js",
+    "static/css/main.6d9ae8f6.chunk.css",
+    "static/js/main.da6e568d.chunk.js"
+  ]
+}
