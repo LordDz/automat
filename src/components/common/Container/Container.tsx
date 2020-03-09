@@ -6,26 +6,28 @@ import './Container.scss'
 export interface IContainerProps {
   nameId: string;
   className?: string;
-  bgImg?: string;
   bgColor: string;
+  bgImg?: string;
 }
+
+interface IWrapper{
+  bgColor: string;
+  bgImage?: string;
+}
+
+const Wrapper = styled.section<IWrapper> `
+  background-image: ${props => props.bgImage ? 'url(' + props.bgImage + ')' : ''};
+  background-color: ${props => props.bgColor};
+  background-repeat: no-repeat;
+  background-size: cover;
+  `
 
 const Container: React.FC<IContainerProps> = (props) => {
   const className = props.className !== undefined && props.className !== null ? 'Container ' + props.className : 
   'Container';
 
-  const Wrapper = props.bgImg !== undefined && props.bgImg !== null ?
-  styled.section`
-  background-image: url(${'/img/bg' + props.bgImg});
-  background-repeat: no-repeat;
-  background-size: cover;
-  ` :
-  styled.section`
-  background-color: ${props.bgColor};
-  `;
-
   return (
-  <Wrapper id={props.nameId} className={className}>
+  <Wrapper bgColor={props.bgColor} bgImage={props.bgImg} id={props.nameId} className={className}>
     <div className='Container__Inner'>
       {props.children}
     </div>

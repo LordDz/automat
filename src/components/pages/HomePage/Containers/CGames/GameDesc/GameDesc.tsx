@@ -8,13 +8,12 @@ interface IGameDescProps {
   videoUrl?: string;
 }
 
+const Video = styled.iframe`
+  border: 1px solid black;`;
+
 const GameDesc: React.FC<IGameDescProps> = (props) => {
 
   const videoExists = props.videoUrl !== undefined && props.videoUrl !== null && props.videoUrl.length > 0;
-  const Video = styled.iframe`
-  border: 1px solid black;
-  `;
-
   const videoContent = videoExists ? <Video title='hey' width="560" height="315" src={'https://www.youtube.com/embed/' + props.videoUrl}
   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></Video> : <div></div>
 
@@ -24,8 +23,6 @@ const GameDesc: React.FC<IGameDescProps> = (props) => {
       <h2>{props.title}</h2>
       <p>{props.text}</p>
       {videoContent}
-      {/* <iframe title='hey' width="560" height="315" src={props.videoUrl}
-       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe> */}
     </div>
   );
 }

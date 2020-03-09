@@ -12,7 +12,8 @@ const CFrontend: React.FC<ICFrontendProps> = (props) => {
   return (
     <Container nameId={props.nameId} className='CFrontend' bgColor='black'>
       <div className='CFrontend__Center'>
-        <h1>Web magics!</h1>
+        <h2>Frontend</h2>
+        <p>Below are three buttons that you can interact with, try them! :)</p>
       </div>
       <ColorButtonContainer></ColorButtonContainer>
 
