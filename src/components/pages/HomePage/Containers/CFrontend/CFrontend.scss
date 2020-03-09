@@ -1,14 +1,13 @@
 .CFrontend {
-    height: 300px;
-    min-height: 300px;
-    // border-bottom: 1px solid #686868;
+    height: 400px;
 
     &__Center {
-        margin-top: auto;
-        margin-bottom: 2em;
+        margin-top: 6em;
+        margin-bottom: auto;
     }
 
     p {
         color: white;
+        margin-bottom: 1em;
     }
 }

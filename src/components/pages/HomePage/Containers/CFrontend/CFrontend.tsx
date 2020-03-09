@@ -10,13 +10,12 @@ interface ICFrontendProps {
 const CFrontend: React.FC<ICFrontendProps> = (props) => {
 
   return (
-    <Container nameId={props.nameId} className='CFrontend' bgColor='black'>
+    <Container nameId={props.nameId} className='CFrontend' bgColor='#262626'>
       <div className='CFrontend__Center'>
-        <h2>Frontend</h2>
-        <p>Below are three buttons that you can interact with, try them! :)</p>
-      </div>
+        <h2>Who am I ?</h2>
+        <p>I don't really know that myself, but here are some of the things I do</p>
       <ColorButtonContainer></ColorButtonContainer>
-
+      </div>
     </Container>
   );
 }

@@ -1,0 +1,10 @@
+.ColorButtonDesc {
+    opacity: 0;
+    grid-column: 1;
+    grid-row: 1;
+    transition: opacity 1s;
+
+    &__Visible {
+        opacity: 1;
+    }
+}

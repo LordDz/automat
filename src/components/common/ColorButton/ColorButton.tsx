@@ -19,7 +19,7 @@ interface ILabel {
 }
 
 const Button = styled.button<IButton> `background-color: ${props => props.bgColor};
-border-radius: 2px;`
+border-radius: 10px;`
 
 const Label = styled.label<ILabel> `
 color: ${props => props.color};
@@ -29,7 +29,7 @@ text-shadow: 1px 1px black;`;
 
 const ColorButton: React.FC<IColorButtonProps> = (props) => {
 
-  const bgColor = props.enabled ? props.bgColorActive : 'gray';
+  const bgColor = props.enabled ? props.bgColorActive : 'black';
   const textColor = props.enabled ? 'white' : props.bgColorActive;
 
   function handleClick() {

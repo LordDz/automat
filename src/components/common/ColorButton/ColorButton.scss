@@ -3,15 +3,21 @@
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: 1fr;
     grid-gap: 10px;
-    border: none;
     padding: 2em;
+    transition: color 0.3s;
+    border-radius: 8px;
+    border: 1px solid black;
+}
 
-    button {
-        transition: color 0.3s;
-        border-radius: 8px;
-    }
-    
-    button:hover {
-        color: lightblue;
-    }
+.ColorButton:hover {
+    color: lightblue;
+    border: 1px solid white;
+}
+
+.ColorButton:active {
+    border: 1px solid black;
+}
+
+.ColorButton:focused {
+    border: 1px solid black;
 }
