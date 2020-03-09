@@ -21,3 +21,12 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+#Visual Studio
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.slnx.sqlite
+.vs/
