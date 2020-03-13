@@ -1,42 +1,38 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styled from 'styled-components'
 import './TopMenu.scss';
 import { ILink } from '../../../models/Link';
+import LabelDavid, { ILabelDavidProps } from './LabelDavid/LabelDavid';
 
 interface ITopMenu {
   nameId: string;
   links: ILink[];
 }
 
-const Label = styled.span`
-  display: flex;
-  margin-left: 1em;
-  transition: color 0.3s;
-  color: gray;
-  &::after {
-    content: '⯈';
-    margin: 0 5px;
-  }
-`;
-
 const TopMenu: React.FC<ITopMenu> = (props) => {
 
   const links = getLinks();
-
+  const davidRef = useRef<ILabelDavidProps>(null);
   
 
-function getLinks() {
-  const links = [];
-  for (let i = 0; i < props.links.length; i++) {
-    links.push(<li key={i}><a href={'#' + props.links[i].name}>{props.links[i].title}</a></li>);
+  function getLinks() {
+    const links = [];
+    for (let i = 0; i < props.links.length; i++) {
+      links.push(<li key={i}><a href={'#' + props.links[i].name}>{props.links[i].title}</a></li>);
+    }
+    return links;
   }
-  return links;
-}
+
+  function davidClickedOn() {
+    if (davidRef && davidRef.current) {
+      davidRef.current.tellDavidToFocus();
+    }
+  }
 
   return (
     <div className='TopMenu'>
       <ul>
-        <li><a href={'#' + props.nameId}><Label>David</Label></a></li>
+        {/* <li><LabelDavid ref={davidRef} nameId={props.nameId} onClick={davidClickedOn} /></li> */}
         {links}
       </ul>
     </div>

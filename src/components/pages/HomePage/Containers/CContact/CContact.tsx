@@ -9,7 +9,7 @@ interface IContactProps {
 const CContact: React.FC<IContactProps> = (props) => {
 
   return (
-    <Container nameId={props.nameId} className='CContact' bgColor='black'>
+    <Container nameId={props.nameId} className='CContact' bgColor='transparent'>
       <div className='CContact__Center'>
         <h1><a href='mailto: david.zetterdahl@hiq.se'>Say hello?</a></h1>
       </div>

@@ -10,8 +10,13 @@ import CFrontend from './Containers/CFrontend/CFrontend';
 import CGamesHeader from './Containers/CGamesHeader/CGamesHeader';
 import { IRowBoxContent } from '../../../models/RowBoxContent';
 
+import bgImg from '../../../img/bg/ctop.jpg';
 import bgImgMods from '../../../img/bg/games/menofwar.jpg';
 import bgImgGames from '../../../img/bg/games/wunderling_a.jpg';
+
+import bgHeaderTop from '../../../img/bg/games/hl2.jpg';
+import bgHeaderSc2 from '../../../img/bg/games/menofwar.jpg';
+
 
 import gameSc2 from '../../../img/bg/games/sc2a.jpg';
 import gameHl2 from '../../../img/bg/games/hl2.jpg';
@@ -21,6 +26,19 @@ import gameAoe2 from '../../../img/bg/games/aoe2.jpg';
 import gameWunderling from '../../../img/bg/games/wunderling.jpg';
 import gameSteve from '../../../img/bg/games/steve.jpg';
 import gameTortoise from '../../../img/bg/games/tortoiseisland.jpg';
+import CTransparent from './Containers/CTransparent/CTransparent';
+import styled from 'styled-components';
+
+
+interface IHomeDiv {
+  bgImg: string;
+}
+
+const HomeDiv = styled.div<IHomeDiv> `background-image: ${props => 'url(' + props.bgImg + ');'} 
+background-size: cover;
+background-repeat: no-repeat;
+background-position: 50% 50%;
+background-attachment: fixed;`
 
 
 const HomePage: React.FC = () => {
@@ -77,10 +95,11 @@ const HomePage: React.FC = () => {
 
   const content = <div className='HomePage__Content'>
     <CTop nameId='top' />
-    <CFrontend nameId='frontend' />
-    <CGamesHeader nameId='gamesHeader' />
-    <CGames nameId='mods' title='I tend to make mods' initialBg={bgImgMods} games={mods} />
-    <CGames nameId='games' title='and a few games' initialBg={bgImgGames} games={games} />
+    <CFrontend nameId='frontend'/>
+    {/* <CTransparent nameId='CTransparent1'  height='150px'/> */}
+    {/* <CGamesHeader nameId='gamesHeader' bgImg={bgHeaderSc2} text="When I'm not busy making websites" /> */}
+    <CGames nameId='mods' initialBg={bgImgMods} games={mods} textTitle="When I'm not busy making websites" title='I tend to make mods' />
+    <CGames nameId='games' initialBg={bgImgGames} games={games} textTitle="aswell as some" title='Games' />
     <CContact nameId='contact' />
   </div>;
 
@@ -103,10 +122,10 @@ const HomePage: React.FC = () => {
   }]
 
   return (
-    <div className='HomePage'>
+    <HomeDiv className='HomePage' bgImg={bgImg}>
       <TopMenu links={links} nameId='top' />
       {content}
-    </div>
+    </HomeDiv>
   );
 };
 

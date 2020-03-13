@@ -8,6 +8,7 @@ export interface IColorButtonProps {
   bgColorActive: string;
   enabled: boolean;
   onClick: (idNr: number) => void;
+  setFunction: (func: Function) => void;
 }
 
 interface IButton {
@@ -32,8 +33,13 @@ const ColorButton: React.FC<IColorButtonProps> = (props) => {
   const bgColor = props.enabled ? props.bgColorActive : 'black';
   const textColor = props.enabled ? 'white' : props.bgColorActive;
 
+  function childSayHi() {
+    console.log('hi!');
+  }
+
   function handleClick() {
     props.onClick(props.idNr);
+    props.setFunction(childSayHi);
   }
   
   return (

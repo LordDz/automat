@@ -1,7 +1,15 @@
 .CGames {
 
+    height: 800px;
+
+    h1 {
+        margin-right: 3em;
+        margin-top: 0.5em;
+    }
+
     &__Container {
-        margin-top: 2em;
+        margin-top: auto;
+        margin-bottom: auto;
 
         h2 {
             margin-bottom: 10px;

@@ -7,6 +7,7 @@ import GameDesc from './GameDesc/GameDesc';
 
 interface ICGamesProps {
   nameId: string;
+  textTitle: string;
   title: string;
   initialBg: string;
   games: IRowBoxContent[];
@@ -36,6 +37,7 @@ const CGames: React.FC<ICGamesProps> = (props) => {
 
   return (
     <Container className='CGames' nameId={props.nameId} bgColor='#001D38' bgImg={bgSrc}>
+      <h1>{props.textTitle}</h1>
       <div className='CGames__Container'>
         <div className='CGames__Group'>
           <GameDesc title={gameTitle} text={gameText} videoUrl={gameVideoUrl} />

@@ -8,6 +8,7 @@ const ColorButtonContainer: React.FC = () => {
   const [btnEnabled1, setbtnEnabled1] = useState(false);
   const [btnEnabled2, setbtnEnabled2] = useState(false);
   const [btnEnabled3, setbtnEnabled3] = useState(false);
+  const [myFunction, setMyFunction] = useState<Function | undefined>();
 
   function buttonPressed(idNr: number) {
 
@@ -33,9 +34,9 @@ const ColorButtonContainer: React.FC = () => {
   return (
     <div className='ColorButtonContainer'>
       <div className='ColorButtonContainer__Grid'>
-        <ColorButton idNr={1} text='Web Design' bgColorActive={'red'} onClick={buttonPressed} enabled={btnEnabled1}></ColorButton>
-        <ColorButton idNr={2} text='UX Design' bgColorActive={'green'} onClick={buttonPressed} enabled={btnEnabled2}></ColorButton>
-        <ColorButton idNr={3} text='Games' bgColorActive={'#0095ff'} onClick={buttonPressed} enabled={btnEnabled3}></ColorButton>
+        <ColorButton idNr={1} text='Web Design' bgColorActive={'red'} onClick={buttonPressed} enabled={btnEnabled1} setFunction={func => setMyFunction(func)}></ColorButton>
+        <ColorButton idNr={2} text='UX Design' bgColorActive={'green'} onClick={buttonPressed} enabled={btnEnabled2} setFunction={func => setMyFunction(func)} ></ColorButton>
+        <ColorButton idNr={3} text='Games' bgColorActive={'#0095ff'} onClick={buttonPressed} enabled={btnEnabled3} setFunction={func => setMyFunction(func)}></ColorButton>
       </div>
 
       <div className='ColorButtonContainer__Desc'>
