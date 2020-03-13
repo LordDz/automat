@@ -98,8 +98,8 @@ const HomePage: React.FC = () => {
     <CFrontend nameId='frontend'/>
     {/* <CTransparent nameId='CTransparent1'  height='150px'/> */}
     {/* <CGamesHeader nameId='gamesHeader' bgImg={bgHeaderSc2} text="When I'm not busy making websites" /> */}
-    <CGames nameId='mods' initialBg={bgImgMods} games={mods} textTitle="When I'm not busy making websites" title='I tend to make mods' />
-    <CGames nameId='games' initialBg={bgImgGames} games={games} textTitle="aswell as some" title='Games' />
+    <CGames nameId='games' initialBg={bgImgGames} games={games} textTitle="When I'm not busy making websites" textTitle="I tend to make games" title='Games' />
+    <CGames nameId='mods' initialBg={bgImgMods} games={mods} title='as well as some mods' />
     <CContact nameId='contact' />
   </div>;
 
@@ -109,12 +109,12 @@ const HomePage: React.FC = () => {
     name: 'frontend',
   },
   {
-    title: 'Mods',
-    name: 'mods',
-  },
-  {
     title: 'Games',
     name: 'games',
+  },
+  {
+    title: 'Mods',
+    name: 'mods',
   },
   {
     title: 'Contact',
